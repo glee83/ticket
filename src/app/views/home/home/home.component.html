@@ -1,0 +1,116 @@
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid navbar-container">
+          <a class="navbar-brand text-light" href="#">OnlineBus</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-light" href="#">Book ticket</a>
+              <a class="nav-link text-light" href="#">Check ticket</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h3 class="hero-sub-title">Buy your ticket in clicks</h3>
+            <h1 class="hero-title">Buy you ticket now on <span class="secondary-color-title">Online ticket</span> </h1>
+            <p class="hero-para">Get your ticket booked in simples clicks. Thanks to OBT</p>
+
+            <div class="hero-btns">
+              <button class="sec-btn mr-3" mat-button>View list</button>
+              <button class="pri-btn" mat-button>Book now</button>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="head">
+              <div class="btn-container d-flex justify-content-between align-items-center">
+                <button class="show-btn " mat-button>
+                  <mat-icon>access_time</mat-icon>
+                  Show ticket</button>
+                <button class="fast-btn" mat-button>
+                  <mat-icon>flash_on</mat-icon>
+                  Fast booking</button>
+              </div>
+              <form action="" class="mx-auto">
+                <div class="locations d-flex align-items-center justify-content-between">
+                  <div class="from ml-2">
+                    <label for="from" class="mb-1">From</label>
+                    <fieldset class="d-flex justify-content-center align-items-center">
+                        <mat-icon class="mat-sec">drive_eta</mat-icon>
+                        <select name="locations" id="locations">
+                          <option value="Douala">Douala</option>
+                          <option value="Yaounde">Yaounde</option>
+                          <option value="Bafoussam">Bafoussam</option>
+                          <option value="Bamenda">Bamenda</option>
+                          <option value="Limbe">Limbe</option>
+                        </select>
+                    </fieldset>
+                  </div>
+                  <div class="to mr-2">
+                    <label for="to" class="mb-1">To</label>
+                    <fieldset class="d-flex align-items-center justify-content-center">
+                        <mat-icon class="mat-sec">drive_eta</mat-icon>
+                        <select name="locations" id="locations">
+                          <option value="Douala">Douala</option>
+                          <option value="Yaounde">Yaounde</option>
+                          <option value="Bafoussam">Bafoussam</option>
+                          <option value="Bamenda">Bamenda</option>
+                          <option value="Limbe">Limbe</option>
+                        </select>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="locations d-flex align-items-center justify-content-between">
+                  <div class="from ml-2">
+                    <label for="date" class="mb-1">Date</label>
+                    <fieldset class="d-flex justify-content-center align-items-center">
+                      <mat-icon class="mat-sec">calendar_today</mat-icon>
+                        <input type="date" name="date" id="date" class="w-75 pl-0">
+                    </fieldset>
+                  </div>
+                  <div class="to mr-2">
+                    <label for="to" class="mb-1">Agencies</label>
+                    <fieldset class="d-flex align-items-center justify-content-center">
+                        <mat-icon class="mat-sec">people</mat-icon>
+                        <select name="agency" id="locations">
+                          <option value="General">General</option>
+                          <option value="Boca">Boca</option>
+                          <option value="Amour Mezam">Amour Mezam</option>
+                          <option value="Vatican">Vatican</option>
+                          <option value="Tressure">Tressure</option>
+                        </select>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="locations d-flex align-items-center justify-content-between">
+                  <div class="from ml-2">
+                    <label for="date" class="mb-1">Bus type</label>
+                    <fieldset class="d-flex justify-content-center align-items-center">
+                      <!-- <mat-icon class="mat-sec">calenday_today</mat-icon> -->
+                        <select name="type" id="locations">
+                          <option value="classique">Classique</option>
+                          <option value="vip">Vip</option>
+                        </select>
+                    </fieldset>
+                  </div>
+                  <div class="to mr-2">
+                    <button mat-button  class="mat-pri"> Next
+                      <mat-icon>arrow_forward</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
