@@ -1,0 +1,225 @@
+/** 
+**  variables **
+***/
+
+@import "../../../../assets/fonts/variable";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-family !important;
+}
+.mat{
+    background-color: $secondary-color;   
+    color: $primary-color;
+}
+
+.mat-sec{
+    color: $secondary-color;
+}
+
+.mat-pri{
+    background: $primary-color;
+}
+.mat-pri-b{
+    color: #208303;
+}
+
+.mat-sec-b{
+    background: #DBA900;
+}
+
+span.dot{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+section.card{
+    width: 100%;
+    height: 100vh;
+    background: $light-white;
+
+    div.card-heading{
+        width: 450px;
+        margin: 0 auto;
+        padding-bottom: 2rem  3rem 0;
+        text-align: center;
+
+        h2.card-heading-title{
+            font-weight: 800;
+            font-size: 30px;
+            color: $secondary-dark;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+            position: relative;
+            padding: .5rem;
+
+            &::after{
+                content: '';
+                display: block;
+                height: 1.5px;
+                width: 15%;
+                background: $light-dark;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                z-index: 1;
+            }
+        }
+
+        p.card-para{
+            color: $light-dark;
+            font-size: 17px;
+            font-weight: 300;
+            padding: 0 .4rem;
+            line-height: 1.2;
+        }
+    }
+
+    div.container{
+        width: 90%;
+        margin: 0 auto;
+
+        div.cards{
+            width: 100%;
+            
+            div.price-card{
+                background: #fff;
+                border-radius: 1rem !important;
+                width: 80%;
+                height: 450px;
+                position: relative;
+
+        
+
+                div.card-head{
+                   padding: .5rem 1rem;
+                   border-bottom: 1px dashed $light-dark;
+                    div.left,
+                    div.right{
+                        
+                        span{
+                            font-weight: 400;
+                            display: block;
+                            font-size: 13px;
+                            color: $light-dark;
+
+                            &:last-child{
+                                font-weight: 500;
+                                font-size: 16px;
+                            }
+                        }
+
+                    }
+
+                    div.mid{
+                        position: relative;
+                        width: 140px;
+
+                        mat-icon.mat-sec-b
+                        ,mat-icon.mat-pri{
+                            border-radius: 50%;
+                            color: #fff;
+                        }
+
+                        span.time{
+                            text-align: center;
+                            font-size: 13px;
+                            position: relative;
+                            
+                            mat-icon{
+                                vertical-align: middle;
+                                font-size: 14px;
+                                padding: .3rem 0;
+                            }
+                        }
+                    }
+                }
+
+                div.seats{
+                    font-size: 13px;
+                }
+
+                div.card-body{
+                    width: 50%;
+                    margin: 3% auto;
+                    border-radius: 1rem;
+                    padding: 1rem .5rem;
+                    border: 1px dashed $light-dark;
+
+                    span{
+                        display: block;
+                        margin-bottom: .5rem;
+                        text-align: center;
+                    }
+
+                    span.agency-name{
+                        color: $secondary-dark;
+                        background: #F9F5E5;
+                        padding: .5rem 1rem;
+                        position: relative;
+                    }
+
+                    span.time{
+                        font-weight: 700;
+                        font-size: 30px;
+                        color: $light-dark;
+                        opacity: .8;
+                    }
+                }
+
+                div.bus-type{
+                    width: 50%;
+                    padding:  .5rem 2rem;
+                    text-align: center;
+                    border-radius: .5rem;
+                    margin: 0 auto;
+                    z-index: 1;
+                    height: 80px;
+
+                    box-shadow: 0px 10px 20px #a1a19d;
+                    // position: absolute;
+                    left: 50%;
+                    top: 80%;
+                    p{
+                        color: $light-dark;
+                        font-weight: 300;
+                        font-size: 15px;
+
+                        span.bus-cat{
+                            color: $secondary-dark;
+                            background: #F9F5E5;
+                            padding: .2rem .3rem;
+                        }
+                    }
+
+                    p.price{
+                        font-weight: 300;
+                        color: $secondary-color;
+                        span{
+                            color: $light-dark;
+                        }
+                    }
+                }
+
+
+                div.card-footer{
+                    padding: 3rem 1rem 1rem;
+                    // background: $secondary-dark;
+                    border-bottom-left-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
+            }
+        }
+    }
+
+}

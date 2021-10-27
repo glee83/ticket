@@ -1,13 +1,15 @@
 <header>
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid navbar-container">
+        <div class="container-fluid navbar-container d-flex justify-content-between align-items-center">
           <a class="navbar-brand text-light" href="#">OnlineBus</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-light" aria-current="page" href="#">
+                <mat-icon class="mat-sec">home</mat-icon>
+                Home<span class="mat-sec do">.</span></a>
               <a class="nav-link text-light" href="#">Book ticket</a>
               <a class="nav-link text-light" href="#">Check ticket</a>
             </div>
@@ -15,16 +17,18 @@
         </div>
     </nav>
 
-    <div class="hero-section">
+    <div class="hero-section container">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
             <h3 class="hero-sub-title">Buy your ticket in clicks</h3>
-            <h1 class="hero-title">Buy you ticket now on <span class="secondary-color-title">Online ticket</span> </h1>
+            <h1 class="hero-title">Buy you ticket now <br> on <span class="secondary-color-title">Online ticket</span> </h1>
             <p class="hero-para">Get your ticket booked in simples clicks. Thanks to OBT</p>
 
             <div class="hero-btns">
-              <button class="sec-btn mr-3" mat-button>View list</button>
+              <button class="sec-btn mr-3" mat-button>
+                
+                View list</button>
               <button class="pri-btn" mat-button>Book now</button>
             </div>
           </div>

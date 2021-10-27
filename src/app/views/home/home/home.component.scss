@@ -30,6 +30,11 @@ h1,h2,h3,h4,h5,h6{
 .mat-pri{
     background: $primary-color;
 }
+
+span.dot{
+    font-size: 30px;
+    font-weight: 500;
+}
 header{
     height: 100vh;
     max-width: 100vw;
@@ -37,18 +42,16 @@ header{
     background-size: cover;
     background-position: center;
 
-
-    div.navbar-container{
-        background-color: rgba(0, 0, 0, 0.4) ;
-        padding: 1rem;
-        display: flex ;
-        justify-content: space-between;
-        align-items: centers;
+    nav{
         width: 100%;
-        div.navbar-container{
-            flex-direction: end;
 
-            
+        div.navbar-container{
+            background-color: rgba(0, 0, 0, 0.4) ;
+            padding: 1rem;
+            display: flex !important;
+            justify-content: space-between;
+            align-items: centers;
+            width: 100%;
             a{
                 font-family: $font-family;
                 text-decoration: #fff ;
@@ -56,9 +59,11 @@ header{
         }
     }
 
+
     div.hero-section{
         width: 100%;
-        margin-top: 5rem;
+        // margin-top: 5rem;
+        margin: 5rem auto;
 
         div.col-md-8{
             h3.hero-sub-title,
@@ -66,16 +71,27 @@ header{
             p{
                 color: #fff;
             }
+            h3.hero-sub-title{
+                font-family: $sub-title;
+                font-weight: 500;
+            }
 
             h1.hero-title{
-                font-weight: 800;
-                font-size: 2rem;
+                font-weight: 900;
+                font-size: 50px;
+                line-height: 1.2;
+
+                span.secondary-color-title{
+                    color: $secondary-color;
+                }
             }
 
             p{
-                font-size: 15px;
+                font-size: 16px;
                 font-weight: 500;
                 line-height: 1.2;
+                word-spacing: 2px;
+                letter-spacing: 1px;
             }
 
             div.hero-btns{
