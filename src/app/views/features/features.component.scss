@@ -1,0 +1,146 @@
+/** 
+**  variables **
+***/
+
+@import "../../../assets/fonts/variable";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-family !important;
+}
+.mat{
+    background-color: $secondary-color;   
+    color: $primary-color;
+}
+
+.mat-sec{
+    color: $secondary-color;
+}
+
+.mat-icon{
+    font-size: 50px;
+}
+
+
+
+.mat-pri{
+    background: $primary-color;
+}
+.mat-pri-b{
+    color: #208303;
+}
+
+.mat-sec-b{
+    background: #DBA900;
+}
+
+span.dot{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+section.feature-section{
+    width: 100%;
+    height: 100vh;
+    
+    div.feature-heading{
+        width: 450px;
+        margin: 0 auto;
+        padding-bottom: 2rem  3rem 0;
+        text-align: center;
+
+        h2.feature-heading-title{
+            font-weight: 800;
+            font-size: 30px;
+            color: $secondary-dark;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+            position: relative;
+            padding: .5rem;
+
+            &::after{
+                content: '';
+                display: block;
+                height: 1.5px;
+                width: 15%;
+                background: $light-dark;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                z-index: 1;
+            }
+        }
+
+        p.feature-para{
+            color: $light-dark;
+            font-size: 17px;
+            font-weight: 300;
+            padding: 0 .4rem;
+            line-height: 1.2;
+        }
+    }
+
+    div.container{
+        height: auto;
+        margin: 0 auto;
+
+        div.row-cont{
+            display: flex;
+            width: 100%;
+            justify-content: space-between !important;
+        }
+
+        div.feature-container{
+            width: 90%;
+            background: #f4f4f4;
+            border-radius: 1rem;
+            overflow: hidden;
+
+            div.feature-content{
+                width: 95%;
+                padding: 1rem 1.2rem;
+
+                div.feature-title{
+                    position: relative;
+                    font-size: 20px;
+                    margin-bottom: 1rem;
+
+                    h2{
+                        font-weight: 600;
+                        color: $light-dark;
+                        line-height: 1;
+                        opacity: .8;
+                    }
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        background: $secondary-dark;
+                        height: 10px;
+                        width: 15%;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 1;
+                        border-radius: .5rem;
+                    }
+
+                    .mat-feature{
+                        color: #F1E9D0;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

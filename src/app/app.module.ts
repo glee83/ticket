@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { CardComponent } from './views/booking/card/card.component'
+import { CardComponent } from './views/booking/card/card.component';
+import { FeaturesComponent } from './views/features/features.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,

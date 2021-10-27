@@ -45,7 +45,7 @@ span.dot{
 section.card{
     width: 100%;
     height: 100vh;
-    background: $light-white;
+    background: #f4f4f4;
 
     div.card-heading{
         width: 450px;
@@ -150,69 +150,78 @@ section.card{
                 }
 
                 div.card-body{
-                    width: 50%;
-                    margin: 3% auto;
-                    border-radius: 1rem;
-                    padding: 1rem .5rem;
-                    border: 1px dashed $light-dark;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    position: relative;
+                    overflow: visible;
+                    height: auto;
+                    
+                    div.card-body-content{
+                        width: 50%;
+                        border-radius: 1rem;
+                        padding: 1rem .5rem;
+                        border: 1px dashed $light-dark;
+                        margin: 1rem 0;
 
-                    span{
-                        display: block;
-                        margin-bottom: .5rem;
-                        text-align: center;
-                    }
-
-                    span.agency-name{
-                        color: $secondary-dark;
-                        background: #F9F5E5;
-                        padding: .5rem 1rem;
-                        position: relative;
-                    }
-
-                    span.time{
-                        font-weight: 700;
-                        font-size: 30px;
-                        color: $light-dark;
-                        opacity: .8;
-                    }
-                }
-
-                div.bus-type{
-                    width: 50%;
-                    padding:  .5rem 2rem;
-                    text-align: center;
-                    border-radius: .5rem;
-                    margin: 0 auto;
-                    z-index: 1;
-                    height: 80px;
-
-                    box-shadow: 0px 10px 20px #a1a19d;
-                    // position: absolute;
-                    left: 50%;
-                    top: 80%;
-                    p{
-                        color: $light-dark;
-                        font-weight: 300;
-                        font-size: 15px;
-
-                        span.bus-cat{
+                        span{
+                            display: block;
+                            margin-bottom: .5rem;
+                            text-align: center;
+                        }
+    
+                        span.agency-name{
                             color: $secondary-dark;
                             background: #F9F5E5;
-                            padding: .2rem .3rem;
+                            padding: .5rem 1rem;
+                            position: relative;
+                        }
+    
+                        span.time{
+                            font-weight: 700;
+                            font-size: 30px;
+                            color: $light-dark;
+                            opacity: .8;
                         }
                     }
 
-                    p.price{
-                        font-weight: 300;
-                        color: $secondary-color;
+                    div.bus-type{
+                        width: 50%;
+                        padding:  .5rem 2rem;
+                        border-radius: .5rem;
+                        box-shadow: 0px 10px 20px #a1a19d9d;
+                        position: absolute;
+                        left: 50;
+                        top: 120%;
+                        z-index: 999;
                         span{
+                            display: inline-block;
                             color: $light-dark;
+                            font-weight: 300;
+                            font-size: 12px;
+    
+                            span.bus-cat{
+                                color: $secondary-dark;
+                                background: #F9F5E5;
+                                font: 13px;
+                            }
+                        }
+    
+                        span.price{
+                            font-weight: 800;
+                            color: $light-dark
+                            span{
+                                color: $light-dark;
+                            }
                         }
                     }
                 }
 
 
-                div.card-footer{
+
+                div.card-foot{
+                    margin-top: 4rem;
                     padding: 3rem 1rem 1rem;
                     // background: $secondary-dark;
                     border-bottom-left-radius: 1rem;
@@ -222,4 +231,15 @@ section.card{
         }
     }
 
+}
+
+@media only screen and (min-width: 550px){
+    section.card{
+        height: auto;
+        width: 100%;
+
+        div.price-card{
+            margin-bottom: 2rem;
+        }
+    }
 }
