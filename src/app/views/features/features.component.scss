@@ -48,6 +48,52 @@ span.dot{
     font-weight: 500;
 }
 
+div.container{
+    width: 100%;
+    margin: 0 auto;
+
+    div.row-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        div.feature-container{
+            width: 100% !important;
+
+            &:not(:first-child){
+                margin-left: 1rem;
+            }
+            
+        }
+    }
+}
+
+@media screen and(min-width: 450px) and (max-width: 920px) {
+    div.container{
+        width: 100%;
+        margin: 0 auto;
+    
+        div.row-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            div.feature-container{
+                width: 100% !important;
+    
+                &:not(:last-child){
+                    margin-bottom: 1rem;
+                }
+                
+            }
+        }
+    }
+}
+
 section.feature-section{
     width: 100%;
     height: 100vh;
@@ -91,23 +137,21 @@ section.feature-section{
     }
 
     div.container{
-        height: auto;
-        margin: 0 auto;
+       
 
         div.row-cont{
-            display: flex;
             width: 100%;
             justify-content: space-between !important;
         }
 
         div.feature-container{
-            width: 90%;
+            width: 300px;
+            // width: 90%;
             background: #f4f4f4;
             border-radius: 1rem;
             overflow: hidden;
 
             div.feature-content{
-                width: 95%;
                 padding: 1rem 1.2rem;
 
                 div.feature-title{

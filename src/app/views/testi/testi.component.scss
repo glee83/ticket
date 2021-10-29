@@ -1,0 +1,200 @@
+
+/** 
+**  variables **
+***/
+
+@import "../../../assets/fonts/variable";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-family !important;
+}
+.mat{
+    background-color: $secondary-color;   
+    color: $primary-color;
+}
+
+.mat-sec{
+    color: $secondary-color;
+}
+
+.mat-pri{
+    background: $primary-color;
+}
+.mat-pri-b{
+    color: #208303;
+}
+
+.mat-sec-b{
+    background: #DBA900;
+}
+
+span.dot{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+section.testimo-section{
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 0;
+
+    div.testimo-heading{
+        margin: 0 auto;
+        padding-bottom: 2rem  3rem 0;
+        text-align: center;
+    
+        h2.testimo-heading-title{
+            font-weight: 800;
+            font-size: 30px;
+            color: $secondary-dark;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+            position: relative;
+            padding: .5rem;
+    
+            &::after{
+                content: '';
+                display: block;
+                height: 2px;
+                width: 3%;
+                background: $light-dark;
+                position: absolute;
+                top: 100%;
+                left: 48%;
+                z-index: 1;
+            }
+        } 
+    }
+
+    div.testimo-container{
+        width: 100%;
+        height: 600px;
+        position: relative;
+        background-color: #FCEDB8;
+
+        &::before{
+            content: '';
+            display: block;
+            width: 50%;
+            height: 100%;
+            background-color: #F8f8f8;
+        }
+        
+        div.testimo-left-container{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            div.testimo-images-container{
+                display: grid;
+                grid-template-columns: 2fr 1fr 2fr;
+                grid-template-rows: 1fr;
+                position: relative;
+                height: 100%;
+                width: 100%;
+
+                div.testimo-images{
+                    // position: relative;
+    
+                    div.img{
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                        background-color:white;
+                        outline: 4px solid #EBEBEB;
+                        cursor: pointer;
+                        position: relative;
+                        img{
+                            width: 90%;
+                            height: 90%;
+                            border-radius: 50%;
+                            transform: translate(-50%, -50%);
+                            border: 1px dashed #DBA900;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;  
+                        }   
+                    }
+
+                    div.img_big{
+                        width: 280px;
+                        height: 280px;
+                        border-radius: 50%;
+                        background-color: #E8E1C8;
+
+                        img{
+                            width: 80%;
+                            height: 80%;
+                            outline: 1rem solid #D9BD5D;;
+                        }
+                    }
+                }
+
+                div.testimo_img_first{
+
+                    div.img_1{
+                        position: absolute;
+                        left: 20%;
+                        top: 5%;
+                        img{
+                            border: 1px dashed #DBA900;
+                        }
+                    }
+
+                    div.img_2{
+                        position: absolute;
+                        left: 10%;
+                        top: 30%;
+                    }
+                    div.img_3{
+                        position: absolute;
+                        left: 26%;
+                        top: 45%;
+                    }
+
+                }
+                div.testimo_img_middle{
+
+                    div.img_big{
+                        position: absolute;
+                        top: 10%;
+                        
+                    }
+                }
+                div.testimo_img_last{
+
+                    div.img_4{
+                        position: absolute;
+                        right: 10%;
+                        top: 5%;
+                    }
+
+                    div.img_5{
+                        position: absolute;
+                        right: 27%;
+                        top: 23%;
+                    }
+                    div.img_6{
+                        position: absolute;
+                        right: 10%;
+                        top: 40%;
+                    }
+                }
+            
+            }
+        }
+    }
+}

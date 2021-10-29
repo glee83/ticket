@@ -1,0 +1,240 @@
+/** 
+**  variables **
+***/
+
+@import "../../../assets/fonts/variable";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-family !important;
+}
+.mat{
+    background-color: $secondary-color;   
+    color: $primary-color;
+}
+
+.mat-sec{
+    color: $secondary-color;
+}
+
+.mat-pri{
+    background: $primary-color;
+}
+.mat-pri-b{
+    color: #208303;
+}
+
+.mat-sec-b{
+    background: #DBA900;
+}
+
+span.dot{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+section.card-section{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+
+    div.card-heading{
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 2rem  3rem 0;
+        text-align: center;
+
+        h2.card-heading-title{
+            font-weight: 800;
+            font-size: 30px;
+            color: $secondary-dark;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+            position: relative;
+            padding: .5rem;
+
+            &::after{
+                content: '';
+                display: block;
+                height: 2px;
+                width: 8%;
+                background: $light-dark;
+                position: absolute;
+                top: 100%;
+                left: 45%;
+                z-index: 1;
+            }
+        }
+
+        div.card-content{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr;
+
+            p.card-para{
+                width: 40%;
+                text-align: center;
+                margin-left: 55%;
+            }
+        }
+    }
+
+    div.container{
+        width: 90%;
+        margin: 0 auto;
+
+        div.cards{
+            width: 100%;
+            
+            div.price-card{
+                background: #fff;
+                border-radius: 1rem !important;
+                width: 80%;
+                height: 450px;
+                position: relative;
+
+        
+
+                div.card-head{
+                   padding: .5rem 1rem;
+                   border-bottom: 1px dashed $light-dark;
+                    div.left,
+                    div.right{
+                        
+                        span{
+                            font-weight: 400;
+                            display: block;
+                            font-size: 13px;
+                            color: $light-dark;
+
+                            &:last-child{
+                                font-weight: 500;
+                                font-size: 16px;
+                            }
+                        }
+
+                    }
+
+                    div.mid{
+                        position: relative;
+                        width: 140px;
+
+                        mat-icon.mat-sec-b
+                        ,mat-icon.mat-pri{
+                            border-radius: 50%;
+                            color: #fff;
+                        }
+
+                        span.time{
+                            text-align: center;
+                            font-size: 13px;
+                            position: relative;
+                            
+                            mat-icon{
+                                vertical-align: middle;
+                                font-size: 14px;
+                                padding: .3rem 0;
+                            }
+                        }
+                    }
+                }
+
+                div.seats{
+                    font-size: 13px;
+                }
+
+                div.card-body{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    position: relative;
+                    overflow: visible;
+                    height: auto;
+                    
+                    div.card-body-content{
+                        width: 50%;
+                        border-radius: 1rem;
+                        padding: 1rem .5rem;
+                        border: 1px dashed $light-dark;
+                        margin: 1rem 0;
+
+                        span{
+                            display: block;
+                            margin-bottom: .5rem;
+                            text-align: center;
+                        }
+    
+                        span.agency-name{
+                            color: $secondary-dark;
+                            background: #F9F5E5;
+                            padding: .5rem 1rem;
+                            position: relative;
+                        }
+    
+                        span.time{
+                            font-weight: 700;
+                            font-size: 30px;
+                            color: $light-dark;
+                            opacity: .8;
+                        }
+                    }
+
+                    div.bus-type{
+                        width: 50%;
+                        padding:  .5rem 2rem;
+                        border-radius: .5rem;
+                        box-shadow: 0px 10px 20px #a1a19d9d;
+                        position: absolute;
+                        left: 50;
+                        top: 120%;
+                        z-index: 999;
+                        span{
+                            display: inline-block;
+                            color: $light-dark;
+                            font-weight: 300;
+                            font-size: 12px;
+    
+                            span.bus-cat{
+                                color: $secondary-dark;
+                                background: #F9F5E5;
+                                font: 13px;
+                            }
+                        }
+    
+                        span.price{
+                            font-weight: 800;
+                            color: $light-dark
+                            span{
+                                color: $light-dark;
+                            }
+                        }
+                    }
+                }
+
+
+
+                div.card-foot{
+                    margin-top: 4rem;
+                    padding: 3rem 1rem 1rem;
+                    // background: $secondary-dark;
+                    border-bottom-left-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
+            }
+        }
+    }
+}

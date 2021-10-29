@@ -8,14 +8,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CardComponent } from './views/booking/card/card.component';
-import { FeaturesComponent } from './views/features/features.component'
+import { FeaturesComponent } from './views/features/features.component';
+import { DiscountComponent } from './views/discount/discount.component';
+import { DboardingComponent } from './views/dboarding/dboarding.component';
+import { TestiComponent } from './views/testi/testi.component';
+import { ContactComponent } from './views/contact/contact.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    DiscountComponent,
+    DboardingComponent,
+    TestiComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
