@@ -1,0 +1,22 @@
+<section class="register-container">
+    <div class="form-container">
+        
+        <form [formGroup]="loginForm" >
+            <div class="form-heading">
+                <h3 class="signup-title">Please fill the form below.</h3>
+                <p class="signup-para">Use our service and get 10% discount.</p>
+            </div>
+            
+            <input type="text" name="name" formControlName='name' id="user" placeholder="enter user">
+            <input type="password" name="password" formControlName='password' id="password" placeholder="enter password">
+            <span class="left">Don't have an account? <a (click)="goToRegister()">Sign Up</a></span>
+            <input type="submit" value="Login" (click)="login()" id="submit">
+        </form>
+
+        <div class="form-img">
+            <img src="../../../assets/images/travelman.png" alt="" srcset="">
+        </div>
+
+    </div>
+
+</section>

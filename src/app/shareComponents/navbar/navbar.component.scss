@@ -1,0 +1,61 @@
+
+/** 
+**  variables **
+***/
+
+@import "../../../assets/fonts/variable";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-family !important;
+}
+.mat{
+    background-color: $secondary-color;   
+    color: $primary-color;
+}
+
+.mat-sec{
+    color: $secondary-color;
+}
+
+.mat-pri{
+    background: $primary-color;
+}
+
+span.dot{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+
+nav{
+    width: 100%;
+    // position:sticky;
+    // top: 0;
+    // left: 0;
+    // z-index: 1;
+    
+    div.navbar-container{
+        padding: 1rem 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex !important;
+        justify-content: space-between;
+        align-items: centers;
+        width: 100%;
+
+        a{
+            font-family: $font-family;
+            text-decoration: #fff ;
+        }
+    }
+}
