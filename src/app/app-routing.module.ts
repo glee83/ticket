@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { CardComponent } from './views/booking/card/card.component';
 import { HomeComponent } from './views/home/home/home.component';
 import { SuccessfulTicketComponent } from './views/successful-ticket/successful-ticket.component';
 import { TicketComponent } from './views/ticket/ticket.component';
@@ -15,7 +15,8 @@ const routes: Routes = [
 
   {
     path: 'ticket',
-    component: TicketComponent
+    component: TicketComponent,
+    canActivate: [AuthGuard]
   },
 
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 
 ];

@@ -25,4 +25,12 @@ export class AuthService {
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     })
   }
+
+  loggedIn(){
+    return !!localStorage.getItem('token')
+  }
+
+  getToken(){
+    return localStorage.getItem('token');
+  }
 }

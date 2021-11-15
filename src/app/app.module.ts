@@ -16,10 +16,13 @@ import { ContactComponent } from './views/contact/contact.component'
 import { AuthModule } from './modules/auth.module';
 import { ShareModuleModule } from './modules/share-module.module';
 import { TicketComponent } from './views/ticket/ticket.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SuccessfulTicketComponent } from './views/successful-ticket/successful-ticket.component';
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './services/token-interceptor.service';
+import { TicketService } from './services/ticket.service';
 
 
 @NgModule({
@@ -49,7 +52,11 @@ import { SuccessfulTicketComponent } from './views/successful-ticket/successful-
     ReactiveFormsModule
     
   ],
-  providers: [AuthService],
+  providers: [AuthService, TicketService, AuthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

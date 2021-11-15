@@ -51,6 +51,7 @@ section.successful{
         padding: 2rem 0;
         background-color: #e9f3e6;
         position: relative;
+        margin-bottom: 2rem;
 
         div.container{
             width: 90%;
@@ -100,6 +101,180 @@ section.successful{
                 }
             }
 
+        }
+    }
+
+    div.ticket-container{
+        width: 100%;
+        height: auto;
+
+        div.container{
+            width: 90%;
+            margin: 0 auto;
+
+            div.ticket-counter{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: .2rem 0;
+                margin-bottom: 1rem;
+
+                span{
+                    font-size: 13px;
+                }
+
+                p{
+                    
+                    span.total-ticket{
+                        color: #b79522;
+                        font-weight: 700;
+                        margin-left: 1rem;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            div.suc-ticket-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+
+                div.ticket-container{
+                    width: 300px;
+                    height: auto;
+                    border-radius: .7rem;
+                    background-color: #f7f3e5;
+                    border: 1px dashed #DBA900;
+                    margin-bottom: 1rem;
+
+                    &:not(:last-child){
+                        margin-right: 1rem;
+                    }
+
+                    div.ticket{
+
+                        div.ticket-header{
+                            width: 100%;
+                            background-image: linear-gradient(to right,#c61618, #b01315 );
+                            border-top-left-radius: .7rem;
+                            border-top-right-radius: .7rem;
+                            color: white;
+    
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: .2rem .8rem;
+                            position: relative;
+                            overflow: visible;
+    
+                            &::after{
+                                content: '';
+                                display: block;
+                                background-color: #c61618;
+                                width: 20px;
+                                height: 15px;
+                                top: 70%;
+                                left: 20%;
+                                position: absolute;
+                                transform: skew(45deg);
+                            }
+    
+                            h4.ticket-title{
+                                text-transform: uppercase;
+                                font-weight: 500;
+                                padding: 0;
+                                margin: 0;
+                            }
+                        }
+    
+                        div.ticket-body{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            padding: .4rem .8rem;
+                            div.details{
+                                
+                                div.name{
+                                    margin-bottom: .3rem;
+                                    display: flex;
+                                    flex-direction: column;
+                                    font-size: 13px;
+    
+                                    span.info{
+                                        
+                                        mat-icon{
+                                            color:#DBA900;
+                                            font-size: 13px;
+                                        }
+                                        
+                                        span{
+                                            color:#DBA900;
+                                            font-size: 13px;
+                                        }
+                                    }
+    
+                                    span.bus-type{
+                                        width: 50%;
+                                        color: #fff;
+                                        padding: 0 .3rem;
+                                        border-radius: .2rem;
+                                        background-color:#b79522;
+                                        mat-icon{
+                                            margin-left: 1rem;
+                                            text-align: center;
+                                            padding-top: .3rem;
+                                            vertical-align: middle;
+                                            font-size: 12px;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen  and (max-width: 550px){
+    section.successful{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+
+        div.ticket-container{
+            width: 100%;
+            height: auto;
+
+            div.ticket-container{
+                width: 100%;
+
+                div.container{
+                    width: 100%;
+
+                    div.suc-ticket-container{
+                        width: 100%;
+                        display: flex;
+                        flex-direction:column;
+                        justify-content: center;
+                        align-items: center;
+
+                        div.ticket-container{
+                            width: 100%;
+                            &:not(:last-child){
+                                margin-left: 0rem;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

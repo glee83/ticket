@@ -18,42 +18,97 @@
 
     <div class="ticket-container">
         <div class="container">
-            <div class="suc-ticket-container">
-                <div class= "ticket">
-                    <div class="ticket-header">
-                        <h4 class="ticket-title">Bus Ticket</h4>
-                        <span class="from-to">Douala-Yaounde</span>
-                    </div>
-
-                    <div class="ticket-body">
-                        <div class="details">
-                            <div class="name">
-                                <span class="info">
-                                    <mat-icon>people</mat-icon>
-                                    <span>Full Name</span>
-                                </span>
-                                <span class="name">Glee Albert M</span>
+            <div class="ticket-counter">
+                <span class="notifi">You recieved a notification via SMS and Email. Kindly download your ticket below</span>
+                <p>Total Ticket:<span class="total-ticket"> {{counter}} </span></p>
+            </div>
+            <div class="suc-ticket-container" >
+                <div class= "ticket-container" *ngFor="let ticket of tickets">
+                    <div class="ticket" >
+                        <div class="ticket-header">
+                            <h4 class="ticket-title">Bus Ticket</h4>
+                            <span class="from-to">Douala-Yaounde</span>
+                        </div>
+    
+                        <div class="ticket-body" >
+                            <div class="details">
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>people</mat-icon>
+                                        <span>Full Name</span>
+                                    </span>
+                                    <span class="name"> {{ticket.name | uppercase}} </span>
+                                </div>
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>phone</mat-icon>
+                                        <span class="name">Tel N<sup>o</sup></span>
+                                    </span>
+                                    <span> {{ticket.phone}} </span>
+                                </div>
+    
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>directions_bus</mat-icon>
+                                        <span>Bus Plate N<sup>o</sup></span>
+                                    </span>
+                                    <span class="name">LT 2342xl</span>
+                                </div>
+    
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>credit_card</mat-icon>
+                                        <span>Ticket Price</span>
+                                    </span>
+                                    <span class="name">8000xaf</span>
+                                </div>
                             </div>
-                            <div class="name">
-                                <span class="info">
-                                    <mat-icon>phone</mat-icon>
-                                    <span class="name">Tel N<sup>o</sup></span>
-                                </span>
-                                <span>+237683408264</span>
+                            <div class="details">
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>person_add</mat-icon>
+                                        <span>NID Card N<sup>o</sup></span>
+                                    </span>
+                                    <span class="name"> {{ticket.idCard}} </span>
+                                </div>
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>mail</mat-icon>
+                                        <span class="name">Email</span>
+                                    </span>
+                                    <span> {{ticket.email}} </span>
+                                </div>
+    
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>directions_bus</mat-icon>
+                                        <span>Bus Type</span>
+                                    </span>
+                                    <span class="bus-type">VIP
+                                        <mat-icon>stars</mat-icon>
+                                    </span>
+                                </div>
+    
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>access_time</mat-icon>
+                                        <span>Departure Time</span>
+                                    </span>
+                                    <span class="name">14:45 PM</span>
+                                </div>
+                                <div class="name">
+                                    <span class="info">
+                                        <mat-icon>airline_seat_legroom_normal</mat-icon>
+                                        <span>Seat N<sup>o</sup></span>
+                                    </span>
+                                    <span class="name">{{ticket.seat}}</span>
+                                </div>
                             </div>
-                            
-                            <div class="name">
-                                <span class="info">
-                                    <mat-icon>people</mat-icon>
-                                    <span>Ticket Price</span>
-                                </span>
-                                <span class="name">Glee Albert M</span>
-                            </div>
+    
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>

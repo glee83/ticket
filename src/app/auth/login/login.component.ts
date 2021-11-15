@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
 
   loginForm:FormGroup = new FormGroup({
-    name: new FormControl(null, [Validators.required]),
+    email: new FormControl(null, [ Validators.email,Validators.required]),
     password: new FormControl(null, [Validators.required])
   })
   constructor(private router: Router, private auth: AuthService) { }
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   goToRegister(){
-    this.router.navigate([''])
+    this.router.navigate(['/register'])
   }
 
   login(){
@@ -33,7 +33,8 @@ export class LoginComponent implements OnInit {
       this.auth.loginUsers(JSON.stringify(this.loginForm.value)).subscribe(
         data =>{
           console.log(data)
-          this.router.navigate(['']);
+          localStorage.setItem('token', JSON.stringify(data))
+          this.router.navigate(['/ticket']);
         },
         error => console.log(error)
       )
