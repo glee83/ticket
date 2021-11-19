@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   goToRegister(){
-    this.router.navigate(['/register'])
+    this.router.navigate(['/auths/register'])
   }
 
   login(){

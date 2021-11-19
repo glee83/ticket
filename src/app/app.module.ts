@@ -12,17 +12,16 @@ import { FeaturesComponent } from './views/features/features.component';
 import { DiscountComponent } from './views/discount/discount.component';
 import { DboardingComponent } from './views/dboarding/dboarding.component';
 import { TestiComponent } from './views/testi/testi.component';
-import { ContactComponent } from './views/contact/contact.component'
-import { AuthModule } from './modules/auth.module';
+import { ContactComponent } from './views/contact/contact.component';
 import { ShareModuleModule } from './modules/share-module.module';
 import { TicketComponent } from './views/ticket/ticket.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SuccessfulTicketComponent } from './views/successful-ticket/successful-ticket.component';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { TicketService } from './services/ticket.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -47,7 +46,6 @@ import { TicketService } from './services/ticket.service';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    AuthModule,
     ShareModuleModule,
     ReactiveFormsModule
     
