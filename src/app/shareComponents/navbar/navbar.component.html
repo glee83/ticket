@@ -8,16 +8,24 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link text-light" aria-current="page" routerLink="['/']">
+      <ul class="navbar-nav">
+        <li>
           <mat-icon class="mat-sec">home</mat-icon>
+          <a routerLink='home' class="nav-link text-light" aria-current="page" >
           Home<span class="mat-sec do">.</span></a>
-        <a class="nav-link text-light" routerLink="['/ticket']">Book ticket</a>
-        <a class="nav-link text-light" routerLink="/checkTicket">Check ticket</a>
-      </div>
+        </li>
+        <li>
+          <a class="nav-link text-light" >Book ticket</a>
+
+        </li>
+        <li>
+
+          <a class="nav-link text-light" >Check ticket</a>
+        </li>
+      </ul>
     </div>
 
-    <a routerLink='/account'>Account</a>
+    <a >Account</a>
 
   </div>
 </nav>

@@ -1,1 +1,55 @@
-<p>dashboard works!</p>
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav opened mode="side" #sidenav="matSidenav">
+
+    <div class="user-detail">
+      <img src="../../assets/images/1.jpg" alt="admin img">
+      <h4 class="name">Glee Albert</h4>
+      <span class="pro">Super Admin</span>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button routerLink="/dashboard/home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+  
+    <button mat-button routerLink='/dashboard/users'>
+      <mat-icon>people</mat-icon>
+      <span>Users</span>
+    </button>
+
+    <button mat-button routerLink='/dashboard/ticket'>
+      <mat-icon>library_books</mat-icon>
+      <span>Tickets</span>
+    </button>
+    <button mat-button>
+      <mat-icon>help</mat-icon>
+      <span>Help</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button>Settings</button>
+    <button mat-button>
+      <mat-icon>phone</mat-icon>
+      <span>Contact</span>
+    </button>
+
+
+  </mat-sidenav>
+  <mat-sidenav-content >
+
+    <button mat-icon-button *ngIf="sidenav.mode ==='over'" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+      <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+    </button>
+    
+    <!--
+      routes
+    -->
+    <router-outlet></router-outlet>
+     
+  </mat-sidenav-content>
+</mat-sidenav-container>
+  
