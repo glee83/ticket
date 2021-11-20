@@ -4,6 +4,14 @@
 
 @import "../../assets/fonts/_variable.scss";
 
+mat-panel-title{
+    
+    mat-icon{
+        color: $bg-sidenav;
+        margin-right: .5rem;
+    }
+}
+
 mat-sidenav-container{
     height: 100vh;
     width: 100%;

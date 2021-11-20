@@ -13,6 +13,8 @@ export class DashboardComponent implements OnInit {
   @ViewChild(MatSidenav)
   sidenav: MatSidenav
 
+  panelOpenState = false;
+
   constructor( private obs: BreakpointObserver ) { }
 
   ngAfterViewInit(){

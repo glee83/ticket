@@ -23,6 +23,29 @@
       <mat-icon>library_books</mat-icon>
       <span>Tickets</span>
     </button>
+
+    <mat-divider></mat-divider>
+
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>settings</mat-icon>
+            <span>Settings</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button mat-button>Account</button>
+        <button mat-button>Administrative</button>
+        <button mat-button>Notification</button>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <button mat-button>
+      <mat-icon>phone</mat-icon>
+      <span>Contact</span>
+    </button>
+
     <button mat-button>
       <mat-icon>help</mat-icon>
       <span>Help</span>
@@ -30,12 +53,10 @@
 
     <mat-divider></mat-divider>
 
-    <button>Settings</button>
     <button mat-button>
-      <mat-icon>phone</mat-icon>
-      <span>Contact</span>
+      <mat-icon>person</mat-icon>
+      <span>Logout</span>
     </button>
-
 
   </mat-sidenav>
   <mat-sidenav-content >
