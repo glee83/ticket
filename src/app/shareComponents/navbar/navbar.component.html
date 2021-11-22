@@ -1,31 +1,32 @@
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid navbar-container d-flex justify-content-between align-items-center">
-    
+<nav class="navbar navbar-expand-lg ">
+  <div id="navbar-container">
     <a class="navbar-brand text-light" href="#">OnlineBus</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <mat-icon class="navbar-toggler-icon">menu</mat-icon>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <ul class="navbar-nav">
-        <li>
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item active" id="home" >
           <mat-icon class="mat-sec">home</mat-icon>
-          <a routerLink='home' class="nav-link text-light" aria-current="page" >
+          <a aria-current="page"  routerLink='home' class="nav-link text-light" aria-current="page" >
           Home<span class="mat-sec do">.</span></a>
         </li>
-        <li>
-          <a class="nav-link text-light" >Book ticket</a>
-
+        <li class="nav-item active" >
+          <mat-icon class="mat-sec">event_note</mat-icon>
+          <a class="nav-link text-light" routerLink='/ticket'>Book ticket</a>
         </li>
-        <li>
-
-          <a class="nav-link text-light" >Check ticket</a>
+        
+        <li class="nav-item">
+          <mat-icon class="mat-sec">indeterminate_check_box</mat-icon>
+          <a class="nav-link text-light">Check ticket</a>
+        </li>
+        <li class="nav-item">
+          <mat-icon class="mat-sec">person</mat-icon>
+          <a class="nav-link text-light" routerLink='/auth/register'>Account</a>
         </li>
       </ul>
     </div>
-
-    <a >Account</a>
-
   </div>
 </nav>
