@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactUsService } from 'src/app/services/contact-us.service';
 
@@ -21,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+   
   
   sendMessage(){
     if(!this.contactForm.valid){
