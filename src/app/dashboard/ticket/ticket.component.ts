@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TicketService } from 'src/app/services/ticket.service';
+
 
 @Component({
   selector: 'app-ticket',
@@ -8,8 +10,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class TicketComponent implements OnInit {
 
-  constructor() { }
+  constructor( private ticket: TicketService) { }
 
+  
+  ngOnInit(): void {
+  }
   myTicket:FormGroup = new FormGroup({
     date: new FormControl(null, [Validators.required]),
     departure: new FormControl(null, [Validators.required]),
@@ -20,13 +25,12 @@ export class TicketComponent implements OnInit {
     amount: new FormControl( null , [Validators.required]),
     plate_num: new FormControl( null, [Validators.required])
   })
-
-  ngOnInit(): void {
-  }
-
+  
   addTicket(){
     if(this.myTicket.valid){
-      console.log(this.myTicket.value)
+      console.log('something occure')
+    }else{
+      this.ticket.adminTicket(this.myTicket.value)
     }
   }
 

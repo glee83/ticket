@@ -18,6 +18,7 @@ import { AdministrativeComponent } from './settings/administrative/administrativ
 import { NotificationComponent } from './settings/notification/notification.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDividerModule,
     MatCardModule,
     MatExpansionModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class DashboardModule { }
