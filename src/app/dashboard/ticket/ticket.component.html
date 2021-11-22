@@ -1,1 +1,119 @@
-<p>ticket works!</p>
+<section>
+    <div class="ticket-form">
+        <form [formGroup]="myTicket">
+            <fieldset class="head">
+                <span class="head-title">Fill this form to complete booking</span>
+                <label for="date">Please select a date
+                    <div class="date-container">
+                        <mat-icon>today</mat-icon>
+                        <input type="date" name="date" formControlName="date" id="date" required>
+                    </div>
+                </label>
+            </fieldset><hr>
+
+            <div class="user-details-container">
+                <fieldset class="user-details">
+                    <span class="user-name">
+                        <mat-icon class="mat-sec">person_pin_circle</mat-icon>
+                        <label for="name">Departure</label>
+                    </span>
+                    <input type="text" name="departure" formControlName="departure" id="departure" placeholder="Departure">
+                </fieldset>
+                <fieldset class="user-details">
+                    <span class="user-name">
+                        <mat-icon class="mat-sec">pin_drop</mat-icon>
+                        <label for="destination">Destination</label>
+                    </span>
+                    <input type="text" name="destination" formControlName="destination" id="destination" placeholder="destination" required>
+                </fieldset>
+                <fieldset class="user-details">
+                    <span class="user-name">
+                        <mat-icon class="mat-sec">access_time</mat-icon>
+                        <label for="departure-time">Departure time</label>
+                    </span>
+                    <input type="time" name="departure-time" formControlName="departure_time" id="amount" placeholder="amount" required>
+                </fieldset>
+                <fieldset class="user-details">
+                    <span class="user-name">
+                        <mat-icon class="mat-sec">directions_bus</mat-icon>
+                        <label for="bus-type">Bus type</label>
+                    </span>
+                    <select name="bus-type" formControlName="bus_type" id="bus-type">
+                        <option value="Classique">Classique</option>
+                        <option value="VIP">VIP</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="user-details">
+                    <span class="user-name">
+                        <mat-icon class="mat-sec">money</mat-icon>
+                        <label for="amount">Amount</label>
+                    </span>
+                    <input type="amount" name="amount" formControlName="amount" id="amount" placeholder="amount" required>
+                </fieldset>
+            </div>
+
+            <div class="payment-container">
+                <div class="pay">
+                    <div class="payment-heading">
+                        <h3 class="payment-title mat-sec">Please select a payment method</h3>
+                    </div>
+                    <hr>
+    
+                    <div class="payments">
+                        <a href="">
+                            <img src="../../../assets/images/Payments-logo_visa-master.png" alt="" srcset="">
+                        </a>
+                        <a href="">
+                            <img src="../../../assets/images/Payments-logo_Orange.png" alt="" srcset="">
+                        </a>
+                        <a href="">
+                            <img src="../../../assets/images/Payments-logo_Paypal.png" alt="" srcset="">
+                        </a>
+                        <a href="">
+                            <img src="" alt="" srcset="">
+                        </a>
+                    </div>
+                </div>
+                <div class="seat">
+                    <fieldset class="user-details">
+                        <span class="user-name">
+                            <mat-icon class="mat-sec">airline_seat_recline_normal</mat-icon>
+                            <label for="seat">Seats</label>
+                        </span>
+                        <input type="number" name="seats" formControlName="seat" id="seats" placeholder="Number of seat">
+                    </fieldset>
+                    <fieldset class="user-details">
+                        <span class="user-name">
+                            <mat-icon class="mat-sec">airline_seat_recline_normal</mat-icon>
+                            <label for="plate_num">Plate Number</label>
+                        </span>
+                        <input type="text" name="plate_num" formControlName="plate_num" id="plate_num" placeholder="Bus Plate number">
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="privacy-container">
+                <div class="conditions">
+                    <label for="acceptTerms">
+                        <input type="checkbox" name="acceptTerms" id="acceptTerms">
+                        Accept terms and conditions
+                    </label>
+                    
+                    <label for="acceptPrivacy">
+                        <input type="checkbox" name="acceptPrivacy" id="acceptPrivacy">
+                        Accept privacy policies
+                    </label>
+                    
+                </div>
+
+                <div class="pay-now">
+                    <button class="pay-btn" (click)="addTicket()" type="submit" mat-button>
+                        Submit
+                        <mat-icon>arrow_right</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
