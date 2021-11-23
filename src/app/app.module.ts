@@ -22,6 +22,7 @@ import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { TicketService } from './services/ticket.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
 @NgModule({
@@ -47,8 +48,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     ShareModuleModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    IvyCarouselModule 
   ],
   providers: [AuthService, TicketService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,

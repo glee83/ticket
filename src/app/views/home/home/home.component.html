@@ -115,175 +115,68 @@
             <p class="card-para">We know your time is very precious and we respect that. Check out available trip we prepare for you!</p>
         </div>
         
-        <div class="container carousel slid" id="carouselExampleControls" data-bs-ride="carousel">
-            <div class="cards carousel-inner">
-                <div class="col-card carousel-item  active">
-                    <div class="price-card ">
-                        <div class="card-head d-flex align-items-center justify-content-between mb-3">
-                            <div class="left">
-                                <span>From</span>
-                                <span>Douala</span>
+        <div class="container" >
+            <div class="cards ">
+                <carousel [pauseOnHover]="true" [width]="'100%'" [cellsToScroll]="1" [cellsToShow]="'3'" [objectFit]="'cover'" [lightDOM]="true" class="carousel-slider">
+                    <div class="col-card carousel-cell" [width]="'32%'" *ngFor="let busTicket of busTickets">
+                        <div class="price-card">
+                            <div class="card-head d-flex align-items-center justify-content-between mb-3">
+                                <div class="left">
+                                    <span>From</span>
+                                    <span> {{busTicket.departure | uppercase}} </span>
+                                </div>
+                                <div class="mid d-flex justify-content-between align-items-center">
+                                    <mat-icon class="mat-sec-b">chevron_left</mat-icon>
+                                    <span class="time text-center mat-sec-b">
+                                        <mat-icon>schedule</mat-icon>
+                                        3H: 45Min
+                                    </span>
+                                    <mat-icon class="mat-pri">chevron_right</mat-icon>
+                                </div>
+                                <div class="right">
+                                    <span>To</span>
+                                    <span>{{busTicket.destination | uppercase}}</span>
+                                </div>
                             </div>
-                            <div class="mid d-flex justify-content-between align-items-center">
-                                <mat-icon class="mat-sec-b">chevron_left</mat-icon>
-                                <span class="time text-center mat-sec-b">
-                                    <mat-icon>schedule</mat-icon>
-                                    3H:45Min
-                                </span>
-                                <mat-icon class="mat-pri">chevron_right</mat-icon>
+    
+                            <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
+                                <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
+                                <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
                             </div>
-                            <div class="right">
-                                <span>To</span>
-                                <span>Yaounde</span>
+    
+                            <div class="card-body">
+                                <div class="card-body-content">
+                                    <span class="agency-name">Buca Voyages</span>
+                                    <span class="depart">Departure Time</span>
+                                    <span class="time">{{busTicket.departure_time}}</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
-                            <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
-                            <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="card-body-content">
-
-                                <span class="agency-name">Buca Voyages</span>
-                                <span class="depart">Departure Time</span>
-                                <span class="time">04:30AM</span>
-                            </div>
-                            <div class="bus-type">
-                                <span>Bus Type:<span class="bus-cat">V.I.P 0</span></span>
-                                <span class="price">8,000.00 <span>XAF</span></span>
-                            </div>
-                        </div>
-
-
-                        <div class="card-foot mat-sec-b  d-flex justify-content-between align-items-center">
-                            <div class="bus-details">
-                                <p> Bus Plate N<sup>o</sup>:</p>
-                                <span>LT035E</span>
-                            </div>
-                            <span class="agency-logo">Logo</span>
-                            <div class="bus-details">
-                                <p>Bus Status:</p>
-                                <span>Loading</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-card carousel-item ">
-                    <div class="price-card">
-                        <div class="card-head d-flex align-items-center justify-content-between mb-3">
-                            <div class="left">
-                                <span>From</span>
-                                <span>Douala</span>
-                            </div>
-                            <div class="mid d-flex justify-content-between align-items-center">
-                                <mat-icon class="mat-sec-b">chevron_left</mat-icon>
-                                <span class="time text-center mat-sec-b">
-                                    <mat-icon>schedule</mat-icon>
-                                    3H:45Min
-                                </span>
-                                <mat-icon class="mat-pri">chevron_right</mat-icon>
-                            </div>
-                            <div class="right">
-                                <span>To</span>
-                                <span>Yaounde</span>
-                            </div>
-                        </div>
-
-                        <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
-                            <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
-                            <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="card-body-content">
-                                <span class="agency-name">Buca Voyages</span>
-                                <span class="depart">Departure Time</span>
-                                <span class="time">04:30AM</span>
-                                
-                            </div>
-                            <div class="bus-type">
-                                <span>Bus Type:<span class="bus-cat">Classique</span></span>
-                                <span class="price">8,000.00 <span>XAF</span></span>
-                            </div>
-                        </div>
-
-
-                        <div class="card-foot mat-pri d-flex justify-content-between align-items-center">
-                            <div class="bus-details">
-                                <p> Bus Plate N<sup>o</sup>:</p>
-                                <span>LT035E</span>
-                            </div>
-                            <span class="agency-logo">Logo</span>
-                            <div class="bus-details">
-                                <p>Bus Status:</p>
-                                <span>Loading</span>
+                            
+                            <hr>
+                            <br><br><br>
+                            
+                            <div class="card-foot ">
+                                <div class="bus-type">
+                                    <span>Bus Type:<span class="bus-cat">{{busTicket.bus_type}} </span></span>
+                                    <span class="price">{{busTicket.amount}}<span>XAF</span></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bus-details">
+                                        <p> Bus Plate N<sup>o</sup>:</p>
+                                        <span>{{busTicket.plate_num}}</span>
+                                    </div>
+                                    <span class="agency-logo">Logo</span>
+                                    <div class="bus-details">
+                                        <p>Bus Status:</p>
+                                        <span>Loading</span>
+                                    </div>
+    
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-card carousel-item ">
-                    <div class="price-card">
-                        <div class="card-head d-flex align-items-center justify-content-between mb-3">
-                            <div class="left">
-                                <span>From</span>
-                                <span>Douala</span>
-                            </div>
-                            <div class="mid d-flex justify-content-between align-items-center">
-                                <mat-icon class="mat-sec-b">chevron_left</mat-icon>
-                                <span class="time text-center mat-sec-b">
-                                    <mat-icon>schedule</mat-icon>
-                                    3H:45Min
-                                </span>
-                                <mat-icon class="mat-pri">chevron_right</mat-icon>
-                            </div>
-                            <div class="right">
-                                <span>To</span>
-                                <span>Yaounde</span>
-                            </div>
-                        </div>
-
-                        <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
-                            <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
-                            <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="card-body-content">
-                                <span class="agency-name">Buca Voyages</span>
-                                <span class="depart">Departure Time</span>
-                                <span class="time">04:30AM</span>
-                            </div>
-                            <div class="bus-type">
-                                <span>Bus Type:<span class="bus-cat">V.I.P 0</span></span>
-                                <span class="price">8,000.00 <span>XAF</span></span>
-                            </div>
-                        </div>
-
-
-                        <div class="card-foot mat-sec-b d-flex justify-content-between align-items-center">
-                            <div class="bus-details">
-                                <p> Bus Plate N<sup>o</sup>:</p>
-                                <span>LT035E</span>
-                            </div>
-                            <span class="agency-logo">Logo</span>
-                            <div class="bus-details">
-                                <p>Bus Status:</p>
-                                <span>Loading</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </carousel>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
         </div>
     </section>
 
@@ -432,167 +325,189 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="cards ">
-                <div class="col-card">
-                    <div class="price-card">
-                        <div class="card-head d-flex align-items-center justify-content-between mb-3">
-                            <div class="left">
-                                <span>From</span>
-                                <span>Douala</span>
+        <div class="container " >
+            
+            <div class="cards " >
+               <carousel [pauseOnHover]="true" [loop]="true" [autoplay]="true" [autoplayInterval]="3000" [width]="'100%'" [cellsToScroll]="1" [cellsToShow]="'3'" [objectFit]="'cover'" [lightDOM]="true" class="carousel-slider" id="myCarousel">
+                    <div class="col-card carousel-cell" [width]="'32%'" *ngFor="let busTicket of busTickets">
+                        <div class="price-card">
+                            <div class="card-head d-flex align-items-center justify-content-between mb-3">
+                                <div class="left">
+                                    <span>From</span>
+                                    <span> {{busTicket.departure | uppercase}} </span>
+                                </div>
+                                <div class="mid d-flex justify-content-between align-items-center">
+                                    <mat-icon class="mat-sec-b">chevron_left</mat-icon>
+                                    <span class="time text-center mat-sec-b">
+                                        <mat-icon>schedule</mat-icon>
+                                        3H: 45Min
+                                    </span>
+                                    <mat-icon class="mat-pri">chevron_right</mat-icon>
+                                </div>
+                                <div class="right">
+                                    <span>To</span>
+                                    <span>{{busTicket.destination | uppercase}}</span>
+                                </div>
                             </div>
-                            <div class="mid d-flex justify-content-between align-items-center">
-                                <mat-icon class="mat-sec-b">chevron_left</mat-icon>
-                                <span class="time text-center mat-sec-b">
-                                    <mat-icon>schedule</mat-icon>
-                                    3H:45Min
-                                </span>
-                                <mat-icon class="mat-pri">chevron_right</mat-icon>
+    
+                            <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
+                                <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
+                                <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
                             </div>
-                            <div class="right">
-                                <span>To</span>
-                                <span>Yaounde</span>
+    
+                            <div class="card-body">
+                                <div class="card-body-content">
+                                    <span class="agency-name">Buca Voyages</span>
+                                    <span class="depart">Departure Time</span>
+                                    <span class="time">{{busTicket.departure_time}}</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
-                            <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
-                            <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="card-body-content">
-
-                                <span class="agency-name">Buca Voyages</span>
-                                <span class="depart">Departure Time</span>
-                                <span class="time">04:30AM</span>
-                            </div>
-                            <div class="bus-type">
-                                <span>Bus Type:<span class="bus-cat">V.I.P 0</span></span>
-                                <span class="price">8,000.00 <span>XAF</span></span>
-                            </div>
-                        </div>
-
-
-                        <div class="card-foot mat-sec-b  d-flex justify-content-between align-items-center">
-                            <div class="bus-details">
-                                <p> Bus Plate N<sup>o</sup>:</p>
-                                <span>LT035E</span>
-                            </div>
-                            <span class="agency-logo">Logo</span>
-                            <div class="bus-details">
-                                <p>Bus Status:</p>
-                                <span>Loading</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-card">
-                    <div class="price-card">
-                        <div class="card-head d-flex align-items-center justify-content-between mb-3">
-                            <div class="left">
-                                <span>From</span>
-                                <span>Douala</span>
-                            </div>
-                            <div class="mid d-flex justify-content-between align-items-center">
-                                <mat-icon class="mat-sec-b">chevron_left</mat-icon>
-                                <span class="time text-center mat-sec-b">
-                                    <mat-icon>schedule</mat-icon>
-                                    3H:45Min
-                                </span>
-                                <mat-icon class="mat-pri">chevron_right</mat-icon>
-                            </div>
-                            <div class="right">
-                                <span>To</span>
-                                <span>Yaounde</span>
-                            </div>
-                        </div>
-
-                        <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
-                            <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
-                            <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="card-body-content">
-                                <span class="agency-name">Buca Voyages</span>
-                                <span class="depart">Departure Time</span>
-                                <span class="time">04:30AM</span>
-                                
-                            </div>
-                            <div class="bus-type">
-                                <span>Bus Type:<span class="bus-cat">Classique</span></span>
-                                <span class="price">8,000.00 <span>XAF</span></span>
-                            </div>
-                        </div>
-
-
-                        <div class="card-foot mat-pri d-flex justify-content-between align-items-center">
-                            <div class="bus-details">
-                                <p> Bus Plate N<sup>o</sup>:</p>
-                                <span>LT035E</span>
-                            </div>
-                            <span class="agency-logo">Logo</span>
-                            <div class="bus-details">
-                                <p>Bus Status:</p>
-                                <span>Loading</span>
+                            
+                            <hr>
+                            <br><br><br>
+                            
+                            <div class="card-foot ">
+                                <div class="bus-type">
+                                    <span>Bus Type:<span class="bus-cat">{{busTicket.bus_type}} </span></span>
+                                    <span class="price">{{busTicket.amount}}<span>XAF</span></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bus-details">
+                                        <p> Bus Plate N<sup>o</sup>:</p>
+                                        <span>{{busTicket.plate_num}}</span>
+                                    </div>
+                                    <span class="agency-logo">Logo</span>
+                                    <div class="bus-details">
+                                        <p>Bus Status:</p>
+                                        <span>Loading</span>
+                                    </div>
+    
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-card">
-                    <div class="price-card">
-                        <div class="card-head d-flex align-items-center justify-content-between mb-3">
-                            <div class="left">
-                                <span>From</span>
-                                <span>Douala</span>
+                </carousel>
+                <carousel [pauseOnHover]="true" [width]="'100%'" [cellsToScroll]="1" [cellsToShow]="'2'" [objectFit]="'cover'" [lightDOM]="true" class="carousel-slider-2">
+                    <div class="col-card carousel-cell" [width]="'32%'" *ngFor="let busTicket of busTickets">
+                        <div class="price-card">
+                            <div class="card-head d-flex align-items-center justify-content-between mb-3">
+                                <div class="left">
+                                    <span>From</span>
+                                    <span> {{busTicket.departure | uppercase}} </span>
+                                </div>
+                                <div class="mid d-flex justify-content-between align-items-center">
+                                    <mat-icon class="mat-sec-b">chevron_left</mat-icon>
+                                    <span class="time text-center mat-sec-b">
+                                        <mat-icon>schedule</mat-icon>
+                                        3H: 45Min
+                                    </span>
+                                    <mat-icon class="mat-pri">chevron_right</mat-icon>
+                                </div>
+                                <div class="right">
+                                    <span>To</span>
+                                    <span>{{busTicket.destination | uppercase}}</span>
+                                </div>
                             </div>
-                            <div class="mid d-flex justify-content-between align-items-center">
-                                <mat-icon class="mat-sec-b">chevron_left</mat-icon>
-                                <span class="time text-center mat-sec-b">
-                                    <mat-icon>schedule</mat-icon>
-                                    3H:45Min
-                                </span>
-                                <mat-icon class="mat-pri">chevron_right</mat-icon>
+    
+                            <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
+                                <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
+                                <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
                             </div>
-                            <div class="right">
-                                <span>To</span>
-                                <span>Yaounde</span>
+    
+                            <div class="card-body">
+                                <div class="card-body-content">
+                                    <span class="agency-name">Buca Voyages</span>
+                                    <span class="depart">Departure Time</span>
+                                    <span class="time">{{busTicket.departure_time}}</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
-                            <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
-                            <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="card-body-content">
-                                <span class="agency-name">Buca Voyages</span>
-                                <span class="depart">Departure Time</span>
-                                <span class="time">04:30AM</span>
-                            </div>
-                            <div class="bus-type">
-                                <span>Bus Type:<span class="bus-cat">V.I.P 0</span></span>
-                                <span class="price">8,000.00 <span>XAF</span></span>
-                            </div>
-                        </div>
-
-
-                        <div class="card-foot mat-sec-b d-flex justify-content-between align-items-center">
-                            <div class="bus-details">
-                                <p> Bus Plate N<sup>o</sup>:</p>
-                                <span>LT035E</span>
-                            </div>
-                            <span class="agency-logo">Logo</span>
-                            <div class="bus-details">
-                                <p>Bus Status:</p>
-                                <span>Loading</span>
+                            
+                            <hr>
+                            <br><br><br>
+                            
+                            <div class="card-foot ">
+                                <div class="bus-type">
+                                    <span>Bus Type:<span class="bus-cat">{{busTicket.bus_type}} </span></span>
+                                    <span class="price">{{busTicket.amount}}<span>XAF</span></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bus-details">
+                                        <p> Bus Plate N<sup>o</sup>:</p>
+                                        <span>{{busTicket.plate_num}}</span>
+                                    </div>
+                                    <span class="agency-logo">Logo</span>
+                                    <div class="bus-details">
+                                        <p>Bus Status:</p>
+                                        <span>Loading</span>
+                                    </div>
+    
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </carousel>
+
+                <carousel [pauseOnHover]="true" [width]="'100%'" [cellsToScroll]="1" [cellsToShow]="'1'" [objectFit]="'cover'" [lightDOM]="true" class="carousel-slider-3">
+                    <div class="col-card carousel-cell" [width]="'32%'" *ngFor="let busTicket of busTickets">
+                        <div class="price-card">
+                            <div class="card-head d-flex align-items-center justify-content-between mb-3">
+                                <div class="left">
+                                    <span>From</span>
+                                    <span> {{busTicket.departure | uppercase}} </span>
+                                </div>
+                                <div class="mid d-flex justify-content-between align-items-center">
+                                    <mat-icon class="mat-sec-b">chevron_left</mat-icon>
+                                    <span class="time text-center mat-sec-b">
+                                        <mat-icon>schedule</mat-icon>
+                                        3H: 45Min
+                                    </span>
+                                    <mat-icon class="mat-pri">chevron_right</mat-icon>
+                                </div>
+                                <div class="right">
+                                    <span>To</span>
+                                    <span>{{busTicket.destination | uppercase}}</span>
+                                </div>
+                            </div>
+    
+                            <div class="seats d-flex justify-content-between align-items-center fs-6 pl-3 pr-3">
+                                <p>Available Seats: <span class="mat-sec">12 Seats</span></p>
+                                <p>Departure in: <span class="mat-pri-b">30 Min</span></p>
+                            </div>
+    
+                            <div class="card-body">
+                                <div class="card-body-content">
+                                    <span class="agency-name">Buca Voyages</span>
+                                    <span class="depart">Departure Time</span>
+                                    <span class="time">{{busTicket.departure_time}}</span>
+                                </div>
+                            </div>
+                            
+                            <hr>
+                            <br><br><br>
+                            
+                            <div class="card-foot ">
+                                <div class="bus-type">
+                                    <span>Bus Type:<span class="bus-cat">{{busTicket.bus_type}} </span></span>
+                                    <span class="price">{{busTicket.amount}}<span>XAF</span></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bus-details">
+                                        <p> Bus Plate N<sup>o</sup>:</p>
+                                        <span>{{busTicket.plate_num}}</span>
+                                    </div>
+                                    <span class="agency-logo">Logo</span>
+                                    <div class="bus-details">
+                                        <p>Bus Status:</p>
+                                        <span>Loading</span>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </carousel>
             </div>
+  
         </div>
     </section>    
 
@@ -696,5 +611,9 @@
     </div>
     </section>    
 
-
+    <section class="w-100 h-100">
+        <div class="container">
+            
+        </div>
+    </section>
 </div>
