@@ -1,0 +1,92 @@
+
+/** 
+**  variables **
+***/
+
+@import "../../../assets/fonts/variable";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-family !important;
+}
+.mat{
+    background-color: $secondary-color;   
+    color: $primary-color;
+}
+
+.mat-sec{
+    color: $secondary-color;
+}
+
+.mat-pri{
+    background: $primary-color;
+}
+
+span.dot{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.mat-pri-b{
+    color: #208303;
+}
+
+.mat-sec-b{
+    background: #DBA900;
+}
+
+footer{
+    width: 100%;
+    background-color: $light-dark;
+    padding: 1rem 0;
+    color: $light-white;
+
+    div.container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin: 0 auto;
+        div.social-links{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a{
+                cursor: pointer;
+                mat-icon{
+                    vertical-align: middle;
+                }
+                &:not(:first-child){
+                    margin-left: 1rem;
+                }
+            }
+        }
+    
+    }
+}
+
+@keyframes bounce {
+    
+}
+
+@media only screen  and(max-width: 1024px){
+    footer{
+        width: 100%;
+
+        div.container{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
