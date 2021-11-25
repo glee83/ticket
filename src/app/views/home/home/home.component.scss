@@ -484,6 +484,15 @@ div.landing-page{
                     width: 100%;
                     margin: 0 auto;
                     flex-wrap: wrap;
+
+                    .carousel-slider{
+                        display: none;
+                    }
+
+                    .carousel-slider-3{
+                        display: block;
+
+                    }
     
                     div.col-card{
                         width: 100% !important;
@@ -498,6 +507,8 @@ div.landing-page{
     
         }
     }
+
+    /***
     @media only screen  and (max-width: 768px){
         section.card{
             height: auto;
@@ -555,7 +566,7 @@ div.landing-page{
     
         }
     }
-
+    ***/
 
     /*****
         features

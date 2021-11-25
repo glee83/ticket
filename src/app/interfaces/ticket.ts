@@ -5,5 +5,6 @@ export interface Ticket {
     phone: number,
     email: string,
     seat: number,
+    amount: number,
     date: string
 }

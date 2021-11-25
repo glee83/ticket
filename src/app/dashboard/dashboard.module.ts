@@ -19,7 +19,11 @@ import { NotificationComponent } from './settings/notification/notification.comp
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BooketTicketComponent } from './booket-ticket/booket-ticket.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     AccountComponent,
     AdministrativeComponent,
     NotificationComponent,
-    HomeComponent
+    HomeComponent,
+    BooketTicketComponent
   ],
   imports: [
     CommonModule,
@@ -43,6 +48,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatDividerModule,
     MatCardModule,
     MatExpansionModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
     ReactiveFormsModule,
     HttpClientModule
   ]

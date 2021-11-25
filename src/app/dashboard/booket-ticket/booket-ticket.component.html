@@ -1,0 +1,49 @@
+<div class="content mat-elevation">
+    <div class="card-container">
+      <mat-card class="example-card">
+        <mat-card-title>Reserved Tickets</mat-card-title>
+        <mat-card-subtitle>Tickets</mat-card-subtitle>
+        <mat-card-content>
+          <p>Reserved ticket</p>
+          <mat-progress-spinner
+        class="example-margin"
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+        </mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="example-card">
+        <mat-card-title>Available seats</mat-card-title>
+        <mat-card-subtitle>Seats</mat-card-subtitle>
+        <mat-card-content>
+          <p>Available seats <span>12</span></p>
+          <mat-progress-spinner
+            class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [value]="value"
+            >
+        </mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="example-card">
+        <mat-card-title>Total amount</mat-card-title>
+        <mat-card-subtitle>users</mat-card-subtitle>
+        <mat-card-content>
+          <p>All users </p>
+          <span>45</span>
+        </mat-card-content>
+        
+      </mat-card>
+
+    </div>
+
+    
+      
+  </div>
+
+  <div *ngFor="let ticket of tickets">
+      <span >{{ticket.seat}} </span>
+      <span >{{ticket.passengerName}} </span>
+  </div>

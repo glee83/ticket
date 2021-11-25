@@ -25,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     MatIconModule,
     ShareModuleModule,
     ReactiveFormsModule,
-    IvyCarouselModule 
+    IvyCarouselModule
   ],
   providers: [AuthService, TicketService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,

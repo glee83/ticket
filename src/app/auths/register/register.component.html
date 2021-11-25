@@ -11,18 +11,23 @@
             </div>
     
             <fieldset class="pass-details">
-                <input type="text" name="name" formControlName="name" id="name" autocomplete="off" placeholder="enter name">
-                
-                <input type="phone" name="phone" formControlName="phone" id="phone" autocomplete="off"  placeholder="enter phone">
+                <label for="name">
+                    <input type="text" name="name" formControlName="name" id="name" autocomplete="off" placeholder="enter name">
+                    <small *ngIf="myForm.get('name').invalid && myForm.get('name').touched" class="danger-text animate__animated animate__bounce">name is required</small>
+                </label>
+                <label for="phone">
+                    <input type="phone" name="phone" formControlName="phone" id="phone" autocomplete="off"  placeholder="enter phone">
+                    <small *ngIf="myForm.get('phone').touched && myForm.get('phone').invalid" class="danger-text">phone is required</small>
+                </label>
                
             </fieldset>
             
             <input type="email" name="email" formControlName="email" id="email" autocomplete="off"  placeholder="enter email">
-            
+            <small *ngIf="myForm.get('email').touched && myForm.get('email').invalid" class="danger-text">email is required</small>
             <input type="password" name="password" formControlName="password" id="password" autocomplete="off" placeholder="enter password">
-            
+            <small *ngIf="myForm.get('password').touched && myForm.get('password').invalid" class="danger-text">password is required</small>
             <span class="left">Already have an account? <a (click)="goToLogin()">Login</a></span>
-            <input type="submit" (click)="register()" value="Submit" id="submit">
+            <input [disabled]="myForm.invalid" type="submit" (click)="register()" value="Submit" id="submit">
         
             <div style="text-align: center; font-size: bold;">{{success}}</div>
         </form>
