@@ -38,6 +38,7 @@ span.dot{
 
 nav{
     width: 100%;
+    height: auto;
    background-color: $bg-sidenav;
     
     div#navbar-container{
@@ -46,11 +47,24 @@ nav{
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
+        position: relative;
         
         a{
             font-family: $font-family;
             text-decoration: #fff ;
             cursor: pointer;
+        }
+
+        a.navbar-brand{
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 100px;
+            img{
+                padding-left: 3rem;
+                width: 100px;
+                color: $secondary-color;
+            }
         }
 
         li{

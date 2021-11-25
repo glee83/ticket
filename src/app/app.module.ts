@@ -23,8 +23,8 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { TicketService } from './services/ticket.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-
-
+import { MatExpansionModule } from '@angular/material/expansion';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,9 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     MatIconModule,
     ShareModuleModule,
     ReactiveFormsModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    MatExpansionModule,
+    MatFormFieldModule
   ],
   providers: [AuthService, TicketService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,

@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
 
   public busTickets = [];
 
+  step = 0;
+
   contactForm:FormGroup = new FormGroup({
     firstName: new FormControl(null, [ Validators.required]),
     lastName: new FormControl(null , [ Validators.required]),
@@ -30,9 +32,21 @@ export class HomeComponent implements OnInit {
 
   @ViewChild('myCarousel', {static: false}) myCarousel;
 
-next() {
-    this.myCarousel.next();
-}
+  next() {
+      this.myCarousel.next();
+  }
+
+  setStep(index: number){
+    this.step = index;
+  }
+
+  nextStep(){
+    this.step++;
+  }
+
+  prevStep(){
+    this.step--;
+  }
    
   
   sendMessage(){

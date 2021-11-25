@@ -1,4 +1,6 @@
-<section class="register-container">
+<section class="register-container" data-aos="fade-up"
+data-aos-easing="linear"
+data-aos-duration="1500">
     <div class="form-container">
         
         <form [formGroup]="loginForm" >
@@ -8,9 +10,11 @@
             </div>
             
             <input type="email" name="email" formControlName='email' id="user" placeholder="user@gmail">
+            <small *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched" class="danger-text">Please enter valid email</small>
             <input type="password" name="password" formControlName='password' id="password" placeholder="enter password">
+            <small *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched" class="danger-text">Please enter valid password</small>
             <span class="left">Don't have an account? <a (click)="goToRegister()">Sign Up</a></span>
-            <input type="submit" value="Login" (click)="login()" id="submit">
+            <input type="submit" [disabled]="loginForm.invalid" value="Login" (click)="login()" id="submit">
         </form>
 
         <div class="form-img">
