@@ -10,7 +10,7 @@ import { TicketService } from 'src/app/services/ticket.service';
 })
 export class TicketComponent implements OnInit {
 
-  constructor( private ticketService: TicketService, private rout: Router) { }
+  constructor( private ticketS:TicketService,  private rout: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,14 +24,16 @@ export class TicketComponent implements OnInit {
     date: new FormControl( null, [Validators.required])
   })
 
-
-  buyTicket(){
-    if(this.myform.valid){
-      this.ticketService.buyTicket(this.myform.value).subscribe(res =>{
-        console.log(res)
+  ticket(){
+    if(!this.myform.valid){
+      console.log('sorry an error occured!')
+    }else{
+      this.ticketS.addTicket(JSON.stringify(this.myform.value)).subscribe(data =>{
+        console.log(data)
         this.rout.navigate(['/successful'])
-      }, error => console.log(error))
+      },error =>{
+        console.log(error) 
+      })
     }
   }
-
 }

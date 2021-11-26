@@ -12,9 +12,9 @@ export class TicketService {
   base_url = 'http://localhost:3000/api/ticket/add'
   constructor( private http: HttpClient) { }
 
-  buyTicket(body: any) {
+  addTicket(body:any) {
     return this.http.post(this.base_url, body , {
-      observe: body,
+      observe: 'body',
       withCredentials: true,
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     })
@@ -26,7 +26,7 @@ export class TicketService {
 
   adminTicket(body:any){
     this.http.post('http://localhost:3000/api/ticket/addTicket', body, {
-      observe: body,
+      observe: 'body',
       withCredentials: true,
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     })

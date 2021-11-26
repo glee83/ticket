@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
   // get tickets details;
 
   getTicketDetails(){
-    this.ticket.getAdminTicket().subscribe(data =>{
+    this.ticket.getTicket().subscribe(data =>{
       this.busTickets= data
       console.log(this.busTickets)
     }, error => {

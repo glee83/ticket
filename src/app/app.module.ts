@@ -14,7 +14,6 @@ import { DboardingComponent } from './views/dboarding/dboarding.component';
 import { TestiComponent } from './views/testi/testi.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { ShareModuleModule } from './modules/share-module.module';
-import { TicketComponent } from './views/ticket/ticket.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { SuccessfulTicketComponent } from './views/successful-ticket/successful-ticket.component';
@@ -36,7 +35,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     DboardingComponent,
     TestiComponent,
     ContactComponent,
-    TicketComponent,
     SuccessfulTicketComponent
   ],
 
@@ -52,7 +50,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule,
     IvyCarouselModule,
     MatExpansionModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+  
   ],
   providers: [AuthService, TicketService, AuthGuard, {
     provide: HTTP_INTERCEPTORS,

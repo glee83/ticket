@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class RegisterComponent implements OnInit {
 
   success = '';
+  errors= ''
   
   constructor( private auth: AuthService, private router: Router) {
 
@@ -41,7 +42,11 @@ export class RegisterComponent implements OnInit {
          
           localStorage.setItem('token', JSON.stringify(res))
           this.router.navigate(['/ticket']);
-        }, error => console.log(error))
+        }, error => {
+          this.errors = error;
+          console.log(this.errors)
+          
+        })
     }
   }
 

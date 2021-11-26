@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './views/home/home/home.component';
 import { SuccessfulTicketComponent } from './views/successful-ticket/successful-ticket.component';
-import { TicketComponent } from './views/ticket/ticket.component';
 
 const routes: Routes = [
   {

@@ -100,20 +100,23 @@
                                     <mat-icon class="mat-sec">phone</mat-icon>
                                     <label for="phone">Tell N<sup>o</sup></label>
                                 </span>
-                                <input type="text" name="phone" formControlName="phone" id="passengenumber" placeholder="+23768340800043" required>
+                                <input type="number" name="phone" formControlName="phone" id="passengenumber" placeholder="+23768340800043" required>
                             </fieldset>
                             <fieldset class="user-details">
                                 <span class="user-name">
                                     <mat-icon class="mat-sec">email</mat-icon>
-                                    <label for="emial">Email</label>
+                                    <label for="email">Email</label>
                                 </span>
-                                <input type="text" name="emial" formControlName="email" id="passengeremial" placeholder="maghagleebert44@gmail.com">
+                                <input type="email" name="email" formControlName="email" id="passengeremial" placeholder="maghagleebert44@gmail.com">
                             </fieldset>
-
-                            <button class="add-btn mat" mat-button>
-                                <mat-icon>add</mat-icon>
-                                Add
-                            </button>
+                            <fieldset class="user-details">
+                                <span class="user-name">
+                                    <mat-icon class="mat-sec">airline_seat_recline_normal</mat-icon>
+                                    <label for="seat">Seat</label>
+                                </span>
+                                <input type="number" name="seat" formControlName="seat" id="seat" placeholder="seat">
+                              
+                            </fieldset>    
                         </div>
 
                         <div class="payment-container">
@@ -136,6 +139,8 @@
                                     <img src="" alt="" srcset="">
                                 </a>
                             </div>
+
+                            
                         </div>
 
                         <div class="privacy-container">
@@ -155,10 +160,10 @@
                             <div class="pay-now">
                                 <div class="amount-container">
                                     <span class="total">Total:</span>
-                                    <p><span class="amount">8,000.00</span> xaf</p>
+                                    <p><span class="amount" >8,000.00</span> xaf</p>
                                 </div>
 
-                                <button class="pay-btn" type="submit" (click)="buyTicket" mat-button>
+                                <button class="pay-btn" type="submit" (click)="ticket()" mat-button>
                                     Pay Now
                                     <mat-icon>arrow_right</mat-icon>
                                 </button>
